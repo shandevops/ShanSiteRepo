@@ -1,0 +1,10 @@
+name: STAMP Devops Workflow
+on:
+  pull_request:
+    branches: [ master ]
+jobs:  
+  test:
+    runs-on: ubuntu-latest    
+    steps:
+      - name: Execute STAMP Functional Testing
+        run: curl -X POST http://caa7f66b8ee9.ngrok.io/STAMPApi/Execute/AWS%20TP -H "ApiToken: cG9pbnRlbF9hZG1pbjpmM3o0elFVNkpVQm82MkZQbEdLR1BnPT0="
