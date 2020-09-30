@@ -7,4 +7,8 @@ jobs:
     runs-on: ubuntu-latest    
     steps:
       - name: Execute STAMP Functional Testing
-        run: curl -X POST 'http://caa7f66b8ee9.ngrok.io/STAMPApi/Execute/AWS%20TP' -H 'ApiToken:cG9pbnRlbF9hZG1pbjpmM3o0elFVNkpVQm82MkZQbEdLR1BnPT0='
+      - run: curl -X POST 'https://$STP_Host/STAMPApi/Execute/$STP_TestPlan' -H 'ApiToken:$STP_ApiToken'
+      - env:
+          STP_Host: chp1.cloudstamp.net
+          STP_ApiToken: cG9pbnRlbF9hZG1pbjpzbXIwU2l5eEsrY1ZTVHl0TFBuQWxRPT0=
+          STP_TestPlan: DEMO_FT
