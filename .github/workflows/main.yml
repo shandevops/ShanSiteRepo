@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest    
     steps:
       - name: Execute STAMP Functional Testing
-        run: curl -X POST 'https://chp1.cloudstamp.net/STAMPApi/Execute/DEMO_FT' -H 'ApiToken:cG9pbnRlbF9hZG1pbjpzbXIwU2l5eEsrY1ZTVHl0TFBuQWxRPT0='        
+        run: curl -d -X POST 'https://chp1.cloudstamp.net/STAMPApi/Execute/DEMO_FT' -H 'ApiToken:cG9pbnRlbF9hZG1pbjpzbXIwU2l5eEsrY1ZTVHl0TFBuQWxRPT0='        
